@@ -1,0 +1,13 @@
+.htaccess file: <IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTP_HOST} !=anna.local
+    RewriteCond %{HTTP_HOST} !anna.local
+    RewriteCond %{HTTPS} !=on
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R,L]
+</IfModule>
+
+<IfModule mod_headers.c>
+    RewriteEngine On
+    RewriteCond %{HTTP_HOST} !anna.local
+    Header set Strict-Transport-Security "max-age=16070400" env=HTTPS
+</IfModule> 
