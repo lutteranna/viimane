@@ -1,0 +1,54 @@
+#pastMessages {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 500px;
+    width: 400px;
+    border: 1px solid #000;
+    padding: 10px;
+    margin-top:10px;
+    margin-bottom:10px;
+    overflow-y: auto;
+}
+
+.messages {
+    flex-shrink: 0;
+    align-self: flex-start;
+    min-width: 100px;
+    max-width: 300px;
+    min-height: 20px;
+    line-height: 20px;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: dodgerblue;
+    color: white;
+    position: relative;
+}
+
+.no-entries-message {
+    background-color: rgb(30, 184, 255)
+}
+
+.my-messages {
+    align-self: flex-end;
+    background-color: lightblue;
+}
+
+.delete {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    border: 1px solid black;
+    color: black;
+    font-size: 20px;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
